@@ -1,0 +1,13 @@
+body {
+  background-color: black;
+}
+
+.nav-link:hover {
+  text-shadow: 0 0 15px rgba(255, 255, 255, 20);
+  color: #fff;
+}
+
+.custom-active {
+  background-color: #00ffff !important;
+  color: black !important;
+}
