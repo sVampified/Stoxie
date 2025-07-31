@@ -11,3 +11,16 @@ body {
   background-color: #00ffff !important;
   color: black !important;
 }
+
+.btn-custom-outline {
+  color: #00ffff;
+  border-color: #00ffff;
+}
+
+.btn-custom-outline:hover,
+.btn-custom-outline:focus {
+  color: #000;
+  background-color: #00ffff;
+  border-color: #00ffff;
+  box-shadow: none;
+}
