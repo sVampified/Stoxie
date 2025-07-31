@@ -9,7 +9,7 @@ navLinks.forEach((link) => {
 
 const apiKey = "d25ua7pr01qhge4ef840d25ua7pr01qhge4ef84g";
 const prefixUrl = `https://finnhub.io/api/v1`;
-const suffixUrl = `?token=${apiKey}`;
+const suffixUrl = `&token=${apiKey}`;
 let category = "";
 
 async function getMarketData() {
@@ -18,7 +18,7 @@ async function getMarketData() {
 
   try {
     let res = await fetch(url);
-    let marketData = await res;
+    let marketData = await res.json();
     console.log(marketData);
   } catch (error) {
     console.error(error);
