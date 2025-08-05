@@ -24,3 +24,29 @@ body {
   border-color: #00ffff;
   box-shadow: none;
 }
+.faq-item{
+  margin-bottom: 20px;
+  color: white;
+  justify-content: center;
+  text-align: center;
+  
+}
+button.question {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 10px 10px;
+  width: 50%;
+  text-align: left;
+  border-radius: 25px;
+  text-align: center;
+}
+
+.answer {
+  display: none;
+}
+h1{
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+}
