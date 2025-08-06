@@ -65,3 +65,7 @@ h1 {
 .card:hover {
   transform: scale(1.15);
 }
+
+.landing-cards .card:hover {
+  transform: none;
+}
