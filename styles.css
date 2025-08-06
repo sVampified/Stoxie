@@ -24,13 +24,14 @@ body {
   border-color: #00ffff;
   box-shadow: none;
 }
-.faq-item{
+
+.faq-item {
   margin-bottom: 20px;
   color: white;
   justify-content: center;
   text-align: center;
-  
 }
+
 button.question {
   background-color: white;
   color: black;
@@ -45,8 +46,17 @@ button.question {
 .answer {
   display: none;
 }
-h1{
+
+h1 {
   color: white;
   text-align: center;
   margin-top: 20px;
+}
+
+.card {
+  transition: all 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.15);
 }
