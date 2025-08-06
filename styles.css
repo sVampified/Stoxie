@@ -54,6 +54,11 @@ h1 {
 }
 
 .card {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  border: solid 2px #00ffff;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
   transition: all 0.3s;
 }
 

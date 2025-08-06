@@ -1,5 +1,18 @@
 const navLinks = document.querySelectorAll(".nav-link");
 
+// Market Content
+// <p id="market-exchange-text">Exchange:</p>
+//   <p id="market-status-text">Status:</p>
+//   <p id="market-timezone-text">Timezone:</p>
+//   <p id="market-localtime-text">Local Time:</p>
+//   <p id="market-holiday-text">Holiday:</p>
+
+const exchangeText = document.querySelector("#market-exchange-text");
+const statusText = document.querySelector("#market-status-text");
+const timezoneText = document.querySelector("#market-timezone-text");
+const localTimeText = document.querySelector("#market-localtime-text");
+const holidayText = document.querySelector("#market-holiday-text");
+
 navLinks.forEach((link) => {
   link.addEventListener("click", () => {
     navLinks.forEach((nav) => nav.classList.remove("active", "custom-active"));
@@ -20,9 +33,27 @@ async function getMarketData() {
     let res = await fetch(url);
     let marketData = await res.json();
     console.log(marketData);
+
+    const status = marketData.isOpen ? "Open ✅" : "Closed ❌";
+    const localTime = new Date(marketData.t * 1000).toLocaleString("en-US", {
+      timeZone: marketData.timezone,
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: true,
+      weekday: "long",
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    });
+
+    exchangeText.textContent = `Exchange: ${marketData.exchange} 🇺🇸`;
+    statusText.textContent = `Status: ${status}`;
+    timezoneText.textContent = `Timezone: ${marketData.timezone} 🇺🇸`;
+    localTimeText.textContent = `Local Time: ${localTime} 🕒`;
   } catch (error) {
     console.error(error);
   }
 }
 
 getMarketData();
+// setInterval(getMarketData, 60000);
