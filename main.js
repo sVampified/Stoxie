@@ -56,4 +56,35 @@ async function getMarketData() {
 }
 
 getMarketData();
-// setInterval(getMarketData, 60000);
+
+async function getQuoteData() {
+  const cardTitles = document.querySelectorAll(".card-title");
+  const cardTexts = document.querySelectorAll(".card-text");
+
+  for (let i = 0; i < cardTitles.length; i++) {
+    const symbol = cardTitles[i].textContent;
+    const category = `/quote?symbol=${symbol}`;
+    const url = `${prefixUrl}${category}${suffixUrl}`;
+
+    try {
+      const res = await fetch(url);
+      const quoteData = await res.json();
+
+      console.log(quoteData);
+
+      cardTexts[i].innerHTML += `Current Price: $${quoteData.c}<br>`;
+      cardTexts[i].innerHTML += `Change: ${quoteData.d}<br>`;
+      cardTexts[i].innerHTML += `Percent Change: ${quoteData.dp.toFixed(
+        2
+      )}%<br>`;
+      cardTexts[i].innerHTML += `Today's High Price: ${quoteData.h}<br>`;
+      cardTexts[i].innerHTML += `Today's Low Price: ${quoteData.l}<br>`;
+      cardTexts[i].innerHTML += `Today's Open Price: ${quoteData.o}<br>`;
+      cardTexts[i].innerHTML += `Previous Close Price: ${quoteData.pc}<br>`;
+    } catch (error) {
+      console.error(error);
+    }
+  }
+}
+
+getQuoteData();
