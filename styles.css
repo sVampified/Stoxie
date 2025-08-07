@@ -1,5 +1,8 @@
 body {
   background-color: black;
+  transform: scale(0.80);
+  transform-origin: top center;
+  min-height: 100vh;
 }
 
 .nav-link:hover {
@@ -25,49 +28,35 @@ body {
   box-shadow: none;
 }
 
-.faq-item {
-  margin-bottom: 20px;
-  color: white;
-  justify-content: center;
-  text-align: center;
+.about-page .card {
+  transition: all 0.3s;
+  height: 400px; 
+  width: 100%;
 }
 
-button.question {
-  background-color: white;
-  color: black;
-  border: none;
-  padding: 10px 10px;
-  width: 50%;
-  text-align: left;
-  border-radius: 25px;
-  text-align: center;
+.about-page .card:hover {
+  transform: scale(1.15);
 }
 
-.answer {
-  display: none;
+.about-page .card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover; 
+  object-position: top; 
 }
 
-h1 {
-  color: white;
-  text-align: center;
-  margin-top: 20px;
+.about-page .card-body {
+  height: 150px; 
+  overflow: hidden;
 }
 
+/* alan */
 .card {
   background-color: #1e1e1e;
   color: #e0e0e0;
   border: solid 2px #00ffff;
   border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
-  transition: all 0.3s;
-}
-
-.card:hover {
-  transform: scale(1.15);
-}
-
-.landing-cards .card:hover {
-  transform: none;
 }
 
 .card-img-top {
@@ -75,3 +64,32 @@ h1 {
   width: 100%; /* Full width of card */
   object-fit: cover; /* Prevents distortion and keeps image aspect ratio */
 }
+
+/* yiting */
+.faq-item {
+    margin-bottom: 20px;
+    color: white;
+    justify-content: center;
+    text-align: center;
+  }
+
+  button.question {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 10px 10px;
+    width: 50%;
+    text-align: left;
+    border-radius: 25px;
+    text-align: center;
+  }
+  
+  .answer {
+    display: none;
+  }
+
+  h1 {
+      color: white;
+      text-align: center;
+      margin-top: 20px;
+    }
