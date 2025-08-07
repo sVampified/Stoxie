@@ -28,6 +28,7 @@ let category = "";
 async function getMarketData() {
   category = "/stock/market-status?exchange=US";
   let url = `${prefixUrl}${category}${suffixUrl}`;
+  //finnhub.io/api/v1/stock/market-status?exchange=US&token=d25ua7pr01qhge4ef840d25ua7pr01qhge4ef84g
 
   try {
     let res = await fetch(url);
