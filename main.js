@@ -74,13 +74,7 @@ async function getQuoteData() {
 
       cardTexts[i].innerHTML += `Current Price: $${quoteData.c}<br>`;
       cardTexts[i].innerHTML += `Change: ${quoteData.d}<br>`;
-      cardTexts[i].innerHTML += `Percent Change: ${quoteData.dp.toFixed(
-        2
-      )}%<br>`;
-      cardTexts[i].innerHTML += `Today's High Price: ${quoteData.h}<br>`;
-      cardTexts[i].innerHTML += `Today's Low Price: ${quoteData.l}<br>`;
-      cardTexts[i].innerHTML += `Today's Open Price: ${quoteData.o}<br>`;
-      cardTexts[i].innerHTML += `Previous Close Price: ${quoteData.pc}<br>`;
+      cardTexts[i].innerHTML += `Percent Change: ${quoteData.dp.toFixed(2)}%`;
     } catch (error) {
       console.error(error);
     }
