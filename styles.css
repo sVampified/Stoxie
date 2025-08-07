@@ -69,3 +69,9 @@ h1 {
 .landing-cards .card:hover {
   transform: none;
 }
+
+.card-img-top {
+  height: 150px; /* Fixed height */
+  width: 100%; /* Full width of card */
+  object-fit: cover; /* Prevents distortion and keeps image aspect ratio */
+}
