@@ -28,24 +28,25 @@ body {
   box-shadow: none;
 }
 
-/* card styling */
-.card {
+
+.about-page .card {
   transition: all 0.3s;
   height: 400px; 
   width: 100%;
 }
-.card:hover {
+
+.about-page .card:hover {
   transform: scale(1.15);
 }
 
-.card img {
+.about-page .card img {
   width: 100%;
   height: 250px;
   object-fit: cover; 
-  object-position: center; 
+  object-position: top; 
 }
 
-.card-body {
+.about-page .card-body {
   height: 150px; 
   overflow: hidden;
 }
