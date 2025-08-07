@@ -11,7 +11,10 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="styles.css" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.4/tailwind.min.css" rel="stylesheet">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.4/tailwind.min.css"
+      rel="stylesheet"
+    />
   </head>
 
   <body class="about-page">
@@ -39,9 +42,7 @@
           <a class="nav-link text-white fs-5" href="stocks.html">Stocks</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white fs-5" href="watchlist.html"
-            >Watchlist</a
-          >
+          <a class="nav-link text-white fs-5" href="news.html">News</a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-white fs-5" href="faq.html">FAQ</a>
@@ -61,186 +62,343 @@
       ></div>
     </div>
 
-<!-- About 2 - Bootstrap Brain Component -->
-<section class="py-3 py-md-5">
-  <div class="container text-white">
-    <div class="row gy-3 gy-md-4 gy-lg-0 align-items-lg-center">
-      <div class="col-12 col-lg-6">
-        <img class="img-fluid rounded" loading="lazy" src="Images/stonks.jpg" alt="About 2">
+    <!-- About 2 - Bootstrap Brain Component -->
+    <section class="py-3 py-md-5">
+      <div class="container text-white">
+        <div class="row gy-3 gy-md-4 gy-lg-0 align-items-lg-center">
+          <div class="col-12 col-lg-6">
+            <img
+              class="img-fluid rounded"
+              loading="lazy"
+              src="Images/stonks.jpg"
+              alt="About 2"
+            />
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="row justify-content-xl-center">
+              <div class="col-12 col-xl-10">
+                <h2 class="mb-3">Why Choose Us?</h2>
+                <p class="lead fs-4 mb-3 mb-xl-5">
+                  We specialize in providing real-time stock market tracking,
+                  data-driven insights, and intuitive tools that empower
+                  investors to make informed decisions. Whether you're a
+                  beginner or a seasoned trader, our platform keeps you one step
+                  ahead.
+                </p>
+                <div class="d-flex align-items-center mb-3">
+                  <div class="me-3 text-primary">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="28"
+                      height="28"
+                      fill="currentColor"
+                      class="bi bi-check-circle-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="fs-5 m-0">
+                      Advanced algorithms keep your data accurate, fast, and
+                      reliable.
+                    </p>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center mb-3">
+                  <div class="me-3 text-primary">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="28"
+                      height="28"
+                      fill="currentColor"
+                      class="bi bi-check-circle-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="fs-5 m-0">
+                      User-friendly interface designed for clarity and
+                      confidence.
+                    </p>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center mb-4 mb-xl-5">
+                  <div class="me-3 text-primary">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="28"
+                      height="28"
+                      fill="currentColor"
+                      class="bi bi-check-circle-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="fs-5 m-0">
+                      We help you spot trends, track performance, and stay
+                      informed.
+                    </p>
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  class="btn bsb-btn-xl btn-outline-primary rounded-pill"
+                  onclick="window.location.href='stocks.html'"
+                >
+                  Start Tracking
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="col-12 col-lg-6">
-        <div class="row justify-content-xl-center">
-          <div class="col-12 col-xl-10">
-            <h2 class="mb-3">Why Choose Us?</h2>
-            <p class="lead fs-4 mb-3 mb-xl-5"> We specialize in providing real-time stock market tracking, data-driven insights, and intuitive tools that empower investors to make informed decisions. Whether you're a beginner or a seasoned trader, our platform keeps you one step ahead.</p>
-            <div class="d-flex align-items-center mb-3">
-              <div class="me-3 text-primary">
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
-                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-                </svg>
+    </section>
+
+    <!-- Our Team -->
+    <!-- Team 1 - Bootstrap Brain Component -->
+    <section class="py-3 py-md-5 py-xl-8">
+      <div class="container text-white">
+        <div class="row justify-content-md-center">
+          <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
+            <h2 class="mb-4 display-5 text-center">Our Team</h2>
+            <p class="mb-5 text-center lead fs-4">
+              We are young professionals who are passionate about technology and
+              innovation.
+            </p>
+            <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle" />
+          </div>
+        </div>
+      </div>
+
+      <div class="container overflow-hidden">
+        <div class="row gy-4 gy-lg-0 gx-xxl-5">
+          <div class="col-12 col-md-6 col-lg-3">
+            <a
+              href="https://linkedin.com/in/solimonk"
+              target="_blank"
+              style="text-decoration: none"
+            >
+              <div
+                class="card border-0 border-bottom border-primary shadow-sm overflow-hidden bg-dark text-white"
+              >
+                <div class="card-body p-0">
+                  <figure class="m-0 p-0">
+                    <img
+                      class="img-fluid"
+                      loading="lazy"
+                      src="Images/solimon-headshot.jpg"
+                      alt="Solimon Khesrawi"
+                    />
+                    <figcaption class="m-0 p-4">
+                      <h4 class="mb-1">Solimon Khesrawi</h4>
+                      <p class="text-secondary mb-0">
+                        Full-Stack Developer | Product Manager
+                      </p>
+                    </figcaption>
+                  </figure>
+                </div>
               </div>
-              <div>
-                <p class="fs-5 m-0">Advanced algorithms keep your data accurate, fast, and reliable.</p>
+            </a>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <a
+              href="https://linkedin.com/in/alan-lichs"
+              target="_blank"
+              style="text-decoration: none"
+            >
+              <div
+                class="card border-0 border-bottom border-primary shadow-sm overflow-hidden bg-dark text-white"
+              >
+                <div class="card-body p-0">
+                  <figure class="m-0 p-0">
+                    <img
+                      class="img-fluid"
+                      loading="lazy"
+                      src="Images/alan-headshot.jpg"
+                      alt="Alan Li"
+                    />
+                    <figcaption class="m-0 p-4">
+                      <h4 class="mb-1">Alan Li</h4>
+                      <p class="text-secondary mb-0">Front-End Developer</p>
+                    </figcaption>
+                  </figure>
+                </div>
               </div>
-            </div>
-            <div class="d-flex align-items-center mb-3">
-              <div class="me-3 text-primary">
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
-                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-                </svg>
+            </a>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <a
+              href="https://www.linkedin.com/in/yiting-huang-a56462368/"
+              target="_blank"
+              style="text-decoration: none"
+            >
+              <div
+                class="card border-0 border-bottom border-primary shadow-sm overflow-hidden bg-dark text-white"
+              >
+                <div class="card-body p-0">
+                  <figure class="m-0 p-0">
+                    <img
+                      class="img-fluid"
+                      loading="lazy"
+                      src="Images/yiting-headshot.jpg"
+                      alt="Yiting Huang"
+                    />
+                    <figcaption class="m-0 p-4">
+                      <h4 class="mb-1">Yiting Huang</h4>
+                      <p class="text-secondary mb-0">Designer</p>
+                    </figcaption>
+                  </figure>
+                </div>
               </div>
-              <div>
-                <p class="fs-5 m-0">User-friendly interface designed for clarity and confidence.</p>
+            </a>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <a
+              href="https://linkedin.com/in/thinh-nguyen-63b4722b5"
+              target="_blank"
+              style="text-decoration: none"
+            >
+              <div
+                class="card border-0 border-bottom border-primary shadow-sm overflow-hidden bg-dark text-white"
+              >
+                <div class="card-body p-0">
+                  <figure class="m-0 p-0">
+                    <img
+                      class="img-fluid"
+                      loading="lazy"
+                      src="Images/ethan-headshot.jpg"
+                      alt="Ethan Nguyen"
+                    />
+                    <figcaption class="m-0 p-4">
+                      <h4 class="mb-1">Ethan Nguyen</h4>
+                      <p class="text-secondary mb-0">Developer</p>
+                    </figcaption>
+                  </figure>
+                </div>
               </div>
-            </div>
-            <div class="d-flex align-items-center mb-4 mb-xl-5">
-              <div class="me-3 text-primary">
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
-                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-                </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Us -->
+    <div class="flex items-center min-h-screen bg-gray-900">
+      <div class="container mx-auto">
+        <div
+          class="max-w-md mx-auto my-10 bg-gray-800 p-5 rounded-md shadow-sm"
+        >
+          <div class="text-center">
+            <h1 class="my-3 text-3xl font-semibold text-gray-100">
+              Contact Us
+            </h1>
+            <p class="text-gray-400 dark:text-gray-400">
+              Fill up the form below to send us a message.
+            </p>
+          </div>
+          <div class="m-7">
+            <form
+              action="https://api.web3forms.com/submit"
+              method="POST"
+              id="form"
+            >
+              <input
+                type="hidden"
+                name="access_key"
+                value="30b33a6f-4675-4684-b1f0-a892a2380dd5"
+              />
+              <input
+                type="hidden"
+                name="subject"
+                value="New Submission from Web3Forms"
+              />
+              <input
+                type="checkbox"
+                name="botcheck"
+                id=""
+                style="display: none"
+              />
+
+              <div class="mb-6">
+                <label for="name" class="block mb-2 text-sm text-gray-400"
+                  >Full Name</label
+                >
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="John Doe"
+                  required
+                  class="w-full px-3 py-2 h-12 rounded-sm placeholder-gray-500 text-gray-900 bg-gray-100 text-sm focus:outline-none"
+                />
               </div>
-              <div>
-                <p class="fs-5 m-0">We help you spot trends, track performance, and stay informed.</p>
+              <div class="mb-6">
+                <label for="email" class="block mb-2 text-sm text-gray-400"
+                  >Email Address</label
+                >
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="you@company.com"
+                  required
+                  class="w-full px-3 py-2 h-12 rounded-sm placeholder-gray-500 text-gray-900 bg-gray-100 text-sm focus:outline-none"
+                />
               </div>
-            </div>
-            <button type="button" class="btn bsb-btn-xl btn-outline-primary rounded-pill" onclick="window.location.href='stocks.html'">Start Tracking</button>
+              <div class="mb-6">
+                <label for="phone" class="block mb-2 text-sm text-gray-400"
+                  >Phone Number</label
+                >
+                <input
+                  type="text"
+                  name="phone"
+                  id="phone"
+                  placeholder="+1 (555) 1234-567"
+                  required
+                  class="w-full px-3 py-2 h-12 rounded-sm placeholder-gray-500 text-gray-900 bg-gray-100 text-sm focus:outline-none"
+                />
+              </div>
+              <div class="mb-6">
+                <label for="message" class="block mb-2 text-sm text-gray-400"
+                  >Your Message</label
+                >
+
+                <textarea
+                  rows="5"
+                  name="message"
+                  id="message"
+                  placeholder="Your Message"
+                  class="w-full px-3 py-2 rounded-sm placeholder-gray-500 text-gray-900 bg-gray-100 text-sm focus:outline-none"
+                  required
+                ></textarea>
+              </div>
+              <div class="mb-6">
+                <button
+                  type="submit"
+                  class="w-full bg-indigo-600 inline-block text-white no-underline hover:text-indigo-100 py-4 px-4 rounded-sm focus:outline-none"
+                >
+                  Send Message
+                </button>
+              </div>
+              <p class="text-base text-center text-gray-400" id="result"></p>
+            </form>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- Our Team -->
-<!-- Team 1 - Bootstrap Brain Component -->
-<section class="py-3 py-md-5 py-xl-8">
-  <div class="container text-white">
-    <div class="row justify-content-md-center">
-      <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
-        <h2 class="mb-4 display-5 text-center">Our Team</h2>
-        <p class= "mb-5 text-center lead fs-4">We are young professionals who are passionate about technology and innovation.</p>
-        <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle">
-      </div>
-    </div>
-  </div>
-
-  <div class="container overflow-hidden">
-    <div class="row gy-4 gy-lg-0 gx-xxl-5">
-      <div class="col-12 col-md-6 col-lg-3">
-        <a href="https://linkedin.com/in/solimonk" target="_blank" style="text-decoration: none;">
-          <div class="card border-0 border-bottom border-primary shadow-sm overflow-hidden bg-dark text-white">
-            <div class="card-body p-0">
-              <figure class="m-0 p-0">
-                <img class="img-fluid" loading="lazy" src="Images/solimon-headshot.jpg" alt="Solimon Khesrawi">
-                <figcaption class="m-0 p-4">
-                  <h4 class="mb-1">Solimon Khesrawi</h4>
-                  <p class="text-secondary mb-0">Full-Stack Developer | Product Manager</p>
-                </figcaption>
-              </figure>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="col-12 col-md-6 col-lg-3">
-        <a href="https://linkedin.com/in/alan-lichs" target="_blank" style="text-decoration: none;">
-          <div class="card border-0 border-bottom border-primary shadow-sm overflow-hidden bg-dark text-white">
-            <div class="card-body p-0">
-              <figure class="m-0 p-0">
-                <img class="img-fluid" loading="lazy" src="Images/alan-headshot.jpg" alt="Alan Li">
-                <figcaption class="m-0 p-4">
-                  <h4 class="mb-1">Alan Li</h4>
-                  <p class="text-secondary mb-0">Front-End Developer</p>
-                </figcaption>
-              </figure>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="col-12 col-md-6 col-lg-3">
-        <a href="https://www.linkedin.com/in/yiting-huang-a56462368/" target="_blank" style="text-decoration: none;">
-          <div class="card border-0 border-bottom border-primary shadow-sm overflow-hidden bg-dark text-white">
-            <div class="card-body p-0">
-              <figure class="m-0 p-0">
-                <img class="img-fluid" loading="lazy" src="Images/yiting-headshot.jpg" alt="Yiting Huang">
-                <figcaption class="m-0 p-4">
-                  <h4 class="mb-1">Yiting Huang</h4>
-                  <p class="text-secondary mb-0">Designer</p>
-                </figcaption>
-              </figure>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="col-12 col-md-6 col-lg-3">
-        <a href="https://linkedin.com/in/thinh-nguyen-63b4722b5" target="_blank" style="text-decoration: none;">
-          <div class="card border-0 border-bottom border-primary shadow-sm overflow-hidden bg-dark text-white">
-            <div class="card-body p-0">
-              <figure class="m-0 p-0">
-                <img class="img-fluid" loading="lazy" src="Images/ethan-headshot.jpg" alt="Ethan Nguyen">
-                <figcaption class="m-0 p-4">
-                  <h4 class="mb-1">Ethan Nguyen</h4>
-                  <p class="text-secondary mb-0">Developer</p>
-                </figcaption>
-              </figure>
-            </div>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- Contact Us -->
-<div class="flex items-center min-h-screen bg-gray-900">
-  <div class="container mx-auto">
-    <div class="max-w-md mx-auto my-10 bg-gray-800 p-5 rounded-md shadow-sm">
-      <div class="text-center">
-        <h1 class="my-3 text-3xl font-semibold text-gray-100">
-          Contact Us
-        </h1>
-        <p class="text-gray-400 dark:text-gray-400">
-          Fill up the form below to send us a message.
-        </p>
-      </div>
-      <div class="m-7">
-        <form action="https://api.web3forms.com/submit" method="POST" id="form">
-          <input type="hidden" name="access_key" value="30b33a6f-4675-4684-b1f0-a892a2380dd5" />
-          <input type="hidden" name="subject" value="New Submission from Web3Forms" />
-          <input type="checkbox" name="botcheck" id="" style="display: none;" />
-
-          <div class="mb-6">
-            <label for="name" class="block mb-2 text-sm text-gray-400">Full Name</label>
-            <input type="text" name="name" id="name" placeholder="John Doe" required class="w-full px-3 py-2 h-12 rounded-sm placeholder-gray-500 text-gray-900 bg-gray-100 text-sm focus:outline-none" />
-          </div>
-          <div class="mb-6">
-            <label for="email" class="block mb-2 text-sm text-gray-400">Email Address</label>
-            <input type="email" name="email" id="email" placeholder="you@company.com" required class="w-full px-3 py-2 h-12 rounded-sm placeholder-gray-500 text-gray-900 bg-gray-100 text-sm focus:outline-none" />
-          </div>
-          <div class="mb-6">
-            <label for="phone" class="block mb-2 text-sm text-gray-400">Phone Number</label>
-            <input type="text" name="phone" id="phone" placeholder="+1 (555) 1234-567" required class="w-full px-3 py-2 h-12 rounded-sm placeholder-gray-500 text-gray-900 bg-gray-100 text-sm focus:outline-none" />
-          </div>
-          <div class="mb-6">
-            <label for="message" class="block mb-2 text-sm text-gray-400">Your Message</label>
-
-            <textarea rows="5" name="message" id="message" placeholder="Your Message" class="w-full px-3 py-2 rounded-sm placeholder-gray-500 text-gray-900 bg-gray-100 text-sm focus:outline-none" required></textarea>
-          </div>
-          <div class="mb-6">
-            <button type="submit" class="w-full bg-indigo-600 inline-block text-white no-underline hover:text-indigo-100 py-4 px-4 rounded-sm focus:outline-none">
-              Send Message
-            </button>
-          </div>
-          <p class="text-base text-center text-gray-400" id="result"></p>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-<!-- Footer -->
+    <!-- Footer -->
 
     <footer
       class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top text-white"
@@ -255,7 +413,7 @@
           <a href="stocks.html" class="px-2 text-white">Stocks</a>
         </li>
         <li class="nav-item">
-          <a href="watchlist.html" class="px-2 text-white">Watchlist</a>
+          <a href="news.html" class="px-2 text-white">News</a>
         </li>
         <li class="nav-item">
           <a href="faq.html" class="px-2 text-white">FAQ</a>

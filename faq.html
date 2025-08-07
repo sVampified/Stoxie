@@ -36,9 +36,7 @@
           <a class="nav-link text-white fs-5" href="stocks.html">Stocks</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white fs-5" href="watchlist.html"
-            >Watchlist</a
-          >
+          <a class="nav-link text-white fs-5" href="news.html">News</a>
         </li>
         <li class="nav-item">
           <a class="nav-link custom-active fs-5" href="#">FAQ</a>
@@ -61,7 +59,10 @@
     <div class="faq-item">
       <button class="question">Who are we?</button>
       <div class="answer">
-        <p>Stoxie is a free to uses app that shows the stock market of the NYU stock extange</p>
+        <p>
+          Stoxie is a free to uses app that shows the stock market of the NYU
+          stock extange
+        </p>
       </div>
     </div>
     <div class="faq-item">
@@ -73,22 +74,35 @@
     <div class="faq-item">
       <button class="question">How often are stock prices updated?</button>
       <div class="answer">
-        <p>Prices are updated in real time during market hours with minimal delay.</p>
+        <p>
+          Prices are updated in real time during market hours with minimal
+          delay.
+        </p>
       </div>
     </div>
     <div class="faq-item">
       <button class="question">Can I create a watchlist?</button>
       <div class="answer">
-        <p>No, as of this momment you can't create a personalized watchlist to track your favorite stocks. but we do have a watchlist with the most popular stocks</p>
+        <p>
+          No, as of this momment you can't create a personalized watchlist to
+          track your favorite stocks. but we do have a watchlist with the most
+          popular stocks
+        </p>
       </div>
     </div>
 
-      <div class="faq-item">
-        <button class="question">What are stocks</button>
-        <div class="answer">
-          <p>A stock represents a small piece of ownership in a larger company. When you buy a stock, you're essentially buying a share of that company. The price of a stock changes based on how people value the company influenced by factors like performance, news, and market trends.</p>
-        </div>
+    <div class="faq-item">
+      <button class="question">What are stocks</button>
+      <div class="answer">
+        <p>
+          A stock represents a small piece of ownership in a larger company.
+          When you buy a stock, you're essentially buying a share of that
+          company. The price of a stock changes based on how people value the
+          company influenced by factors like performance, news, and market
+          trends.
+        </p>
       </div>
+    </div>
     <footer
       class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top text-white"
     >
@@ -102,13 +116,12 @@
           <a href="stocks.html" class="px-2 text-white">Stocks</a>
         </li>
         <li class="nav-item">
-          <a href="watchlist.html" class="px-2 text-white">Watchlist</a>
+          <a href="news.html" class="px-2 text-white">News</a>
         </li>
         <li class="nav-item">
           <a href="faq.html" class="px-2 text-white">FAQ</a>
         </li>
       </ul>
-
     </footer>
 
     <script
@@ -120,19 +133,18 @@
     <script src="main.js"></script>
     <!-- makes it start off closed then you can click to open it -->
     <script>
-      document.querySelectorAll('.question').forEach(button => {
-      button.addEventListener('click', () => {
-      const answer = button.nextElementSibling;
+      document.querySelectorAll(".question").forEach((button) => {
+        button.addEventListener("click", () => {
+          const answer = button.nextElementSibling;
 
-      document.querySelectorAll('.answer').forEach(a => {
-      if (a !== answer) a.style.display = 'none';
+          document.querySelectorAll(".answer").forEach((a) => {
+            if (a !== answer) a.style.display = "none";
+          });
+
+          answer.style.display =
+            answer.style.display === "block" ? "none" : "block";
+        });
       });
-
-      answer.style.display = (answer.style.display === 'block') ? 'none' : 'block';
-    });
-    });
-      
-  </script>
-
+    </script>
   </body>
 </html>
