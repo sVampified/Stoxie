@@ -28,7 +28,6 @@ body {
   box-shadow: none;
 }
 
-
 .about-page .card {
   transition: all 0.3s;
   height: 400px; 
@@ -51,5 +50,46 @@ body {
   overflow: hidden;
 }
 
+/* alan */
+.card {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  border: solid 2px #00ffff;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+}
 
+.card-img-top {
+  height: 150px; /* Fixed height */
+  width: 100%; /* Full width of card */
+  object-fit: cover; /* Prevents distortion and keeps image aspect ratio */
+}
 
+/* yiting */
+.faq-item {
+    margin-bottom: 20px;
+    color: white;
+    justify-content: center;
+    text-align: center;
+  }
+
+  button.question {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 10px 10px;
+    width: 50%;
+    text-align: left;
+    border-radius: 25px;
+    text-align: center;
+  }
+  
+  .answer {
+    display: none;
+  }
+
+  h1 {
+      color: white;
+      text-align: center;
+      margin-top: 20px;
+    }
