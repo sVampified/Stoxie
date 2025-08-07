@@ -86,7 +86,7 @@ async function getQuoteData() {
       const color = isUp ? "green" : "red";
 
       cardTexts[i].innerHTML = `
-        Current Price: $${quoteData.c}<br>
+        Current Price: $${quoteData.c.toFixed(2)}<br>
         <span style="color: ${color};">
           Change: ${change.toFixed(2)}${arrowSVG}<br>
           Percent Change: ${percentChange.toFixed(2)}%${arrowSVG}
