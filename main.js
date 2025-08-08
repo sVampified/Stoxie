@@ -107,3 +107,26 @@ async function getQuoteData() {
 }
 
 getQuoteData();
+
+async function getNewsData() {
+  const apiKeyNews = "pub_40ef130be2db44dbaa5b724954ebb366";
+  const prefixUrlNews = `https://newsdata.io/api/1/latest?apikey=${apiKeyNews}`;
+  const suffixUrlNews = `&token=${apiKeyNews}`;
+
+  const urlNews = `https://newsdata.io/api/1/news?apikey=${apiKeyNews}&q=NVDA%20OR%20TESLA%20AND%20%22stock%20market%22&country=us&language=en&size=10
+`;
+
+  try {
+    const res = await fetch(urlNews);
+    const newsData = await res.json();
+
+    newsData.results.forEach(function (article) {
+      console.log(article.link);
+    });
+    // console.log(newsData);
+  } catch (error) {
+    console.error("Failed to fetch news:", error);
+  }
+}
+
+getNewsData();
