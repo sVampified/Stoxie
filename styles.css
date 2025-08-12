@@ -154,3 +154,7 @@ table th:last-child {
 .border-cyan {
   border-color: #00ffff !important;
 }
+
+footer a {
+  text-decoration: underline;
+}
