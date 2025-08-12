@@ -130,3 +130,27 @@ h1 {
   text-overflow: ellipsis;
   min-height: 4.5em;
 }
+
+table th {
+  white-space: nowrap;
+}
+
+table th:last-child {
+  max-width: 60px;
+}
+
+.btn-outline-primary {
+  border-color: #00ffff;
+  color: #00ffff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+  background-color: #00ffff;
+  color: #000000;
+  border-color: #00ffff;
+}
+
+.border-cyan {
+  border-color: #00ffff !important;
+}

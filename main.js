@@ -161,3 +161,71 @@ async function getNewsDataFromFirstAPI() {
 }
 
 getNewsDataFromFirstAPI();
+
+async function getMarketDataStocks() {
+  const stockNames = {
+    AAPL: "Apple Inc.",
+    GOOGL: "Alphabet Inc.",
+    TSLA: "Tesla Inc.",
+    AMZN: "Amazon.com Inc.",
+    NVDA: "NVIDIA Corporation",
+    MSFT: "Microsoft Corporation",
+    META: "Meta Platforms Inc.",
+    NFLX: "Netflix Inc.",
+    AMD: "Advanced Micro Devices Inc.",
+    INTC: "Intel Corporation",
+    BA: "The Boeing Company",
+    DIS: "The Walt Disney Company",
+    JPM: "JPMorgan Chase & Co.",
+    V: "Visa Inc.",
+    MA: "Mastercard Incorporated",
+    KO: "The Coca-Cola Company",
+    PEP: "PepsiCo Inc.",
+    WMT: "Walmart Inc.",
+  };
+
+  const tbody = document.getElementById("stocks-tbody");
+  tbody.innerHTML = "";
+
+  for (let symbol of Object.keys(stockNames)) {
+    try {
+      const res = await fetch(
+        `${prefixUrl}/quote?symbol=${symbol}${suffixUrl}`
+      );
+      const quoteData = await res.json();
+
+      const change = quoteData.d;
+      const percentChange = quoteData.dp;
+      const isUp = change >= 0;
+
+      const arrowSVG = isUp
+        ? `<svg width="12" height="12" viewBox="0 0 12 12" fill="green" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle; margin-left: 4px;">
+            <path d="M6,0.002L0 6.002 4.8 6.002 4.8 11.9996 7.2 11.9996 7.2 6.002 12 6.002z"></path>
+          </svg>`
+        : `<svg width="12" height="12" viewBox="0 0 12 12" fill="red" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle; margin-left: 4px; transform: rotate(180deg);">
+            <path d="M6,0.002L0 6.002 4.8 6.002 4.8 11.9996 7.2 11.9996 7.2 6.002 12 6.002z"></path>
+          </svg>`;
+
+      const colorClass = isUp ? "text-success" : "text-danger";
+
+      const tr = document.createElement("tr");
+      tr.innerHTML = `
+        <td><strong>${symbol}</strong></td>
+        <td>${stockNames[symbol]}</td>
+        <td>$${quoteData.c.toFixed(2)}</td>
+        <td><span class="${colorClass}">${change.toFixed(
+        2
+      )} ${arrowSVG}</span></td>
+        <td><span class="${colorClass}">${percentChange.toFixed(
+        2
+      )}% ${arrowSVG}</span></td>
+      `;
+
+      tbody.appendChild(tr);
+    } catch (error) {
+      console.error(`Error fetching data for ${symbol}:`, error);
+    }
+  }
+}
+
+getMarketDataStocks();
