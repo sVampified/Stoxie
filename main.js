@@ -107,3 +107,55 @@ async function getQuoteData() {
 }
 
 getQuoteData();
+
+async function getNewsDataFromFirstAPI() {
+  const today = new Date();
+  const toDate = today.toISOString().slice(0, 10);
+
+  const fromDateObj = new Date(today);
+  fromDateObj.setDate(today.getDate() - 8);
+  const fromDate = fromDateObj.toISOString().slice(0, 10);
+
+  const urlNews = `https://finnhub.io/api/v1/company-news?symbol=AAPL&from=${fromDate}&to=${toDate}&token=d25ua7pr01qhge4ef840d25ua7pr01qhge4ef84g`;
+
+  const newsContainer = document.getElementById("news-container");
+  newsContainer.innerHTML = ""; // Clear previous content
+
+  try {
+    const res = await fetch(urlNews);
+    const newsData = await res.json();
+
+    const YAHOO_PLACEHOLDER =
+      "https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png";
+
+    const filteredArticles = newsData.filter(
+      (article) => article.image && article.image !== YAHOO_PLACEHOLDER
+    );
+
+    filteredArticles.forEach((article) => {
+      const newsItem = document.createElement("div");
+      newsItem.classList.add("col-6", "col-lg-3", "news-item");
+
+      newsItem.innerHTML = `
+        <a href="${
+          article.url
+        }" target="_blank" style="text-decoration: none; color: inherit;">
+          <img src="${
+            article.image
+          }" alt="News image" class="img-fluid mb-2 news-image" />
+          <h5 class="fw-bold news-title">${article.headline}</h5>
+          <p class="mb-1 text-white news-description">${article.summary}</p>
+          <small class="text-white">${new Date(
+            article.datetime * 1000
+          ).toLocaleString()}</small>
+        </a>
+      `;
+
+      newsContainer.appendChild(newsItem);
+    });
+  } catch (error) {
+    console.error("Failed to fetch news:", error);
+  }
+}
+
+getNewsDataFromFirstAPI();
