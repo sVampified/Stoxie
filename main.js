@@ -152,6 +152,8 @@ async function getNewsDataFromFirstAPI() {
       `;
 
       newsContainer.appendChild(newsItem);
+
+      console.log(newsData);
     });
   } catch (error) {
     console.error("Failed to fetch news:", error);

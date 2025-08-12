@@ -103,7 +103,7 @@ h1 {
 .news-item {
   min-height: 100px;
   padding-left: 8px;
-  padding-right: 8px;
+  padding-right: 25px;
 }
 
 .news-image {
@@ -115,18 +115,18 @@ h1 {
 
 .news-title {
   display: -webkit-box;
-  -webkit-line-clamp: 3; /* 2 lines for title */
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-  min-height: 3em; /* ensures consistent height */
+  min-height: 3em;
 }
 
 .news-description {
   display: -webkit-box;
-  -webkit-line-clamp: 5; /* show only 3 lines */
+  -webkit-line-clamp: 4; /* show only 3 lines */
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-  min-height: 4.5em; /* keeps height uniform even if text is short */
+  min-height: 4.5em;
 }
